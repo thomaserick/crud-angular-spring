@@ -10,7 +10,7 @@ export class CoursesComponent implements OnInit {
   courses: Course[] = [
     {
       _id: '1',
-      name: 'Angular',
+      name: 'Angular1',
       category: 'Teste',
     },
   ];
