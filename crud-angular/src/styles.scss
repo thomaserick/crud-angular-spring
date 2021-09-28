@@ -3,7 +3,16 @@
 @include mat-core();
 
 $custom-app-primary: mat-palette($mat-blue);
-$custom-app-secundaty: mat-palette($mat-indigo, A200, A400, 700);
+$custom-app-secundary: mat-palette($mat-indigo, A200, A400, 700);
+$custom-app-warn: mat-palette($mat-red);
+
+$custom-theme: mat-light-theme(
+  $custom-app-primary,
+  $custom-app-secundary,
+  $custom-app-warn
+);
+
+@include angular-material-theme($custom-theme);
 
 html,
 body {
@@ -14,5 +23,11 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
